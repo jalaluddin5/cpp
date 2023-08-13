@@ -1,0 +1,34 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+
+int main()
+{
+   int t;
+   cin>>t;
+   while(t--)
+   {
+       int n,s=0;
+       cin>>n;
+       int a[n];
+       for(int i=0;i<n;i++)
+       {
+           cin>>a[i];
+           s++;
+       }
+       sort(a,a+n);
+
+       if(s<2)
+        cout<<"0\n";
+       else
+       {
+           int x=a[n-2]-a[0];
+       int y=a[n-1]-a[1];
+       cout<<x+y<<endl;
+       }
+
+   }
+
+   return 0;
+}
